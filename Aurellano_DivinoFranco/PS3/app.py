@@ -6,7 +6,6 @@ import mariadb
 import sys
 
 
-
 app = Flask(__name__)
 
 @app.route('/')
