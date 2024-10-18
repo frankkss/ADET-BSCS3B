@@ -1,2 +1,6 @@
 /.venv
+<<<<<<< HEAD
 /myenv
+=======
+/myvenv
+>>>>>>> ef64aa8481e0a61e93ad25bcdebef0372dd7aefe
