@@ -9,19 +9,24 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: url(../static/green.jpg) no-repeat center center fixed;
+            background: url(https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             background-size: cover;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+        .mt-5, .my-5 {
+            margin-top: 3rem !important;
+        }
         .container {
             max-width: 500px;
-            margin: auto;
             padding: 20px;
-            background-color: #ffffff;
+            background-color: inherit;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
         }
         h2 {
             text-align: center;
@@ -35,6 +40,11 @@
         }
         .btn-primary {
             width: 100%;
+            background-color: darkslategray;
+            border-color: darkslategray;
+        }
+        .btn-primary:hover {
+            background-color: darkslategray
         }
     </style>
 </head>

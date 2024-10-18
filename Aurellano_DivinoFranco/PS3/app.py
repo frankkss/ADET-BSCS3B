@@ -1,6 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-import json
-import json
 import os
 import mariadb
 import sys
@@ -24,13 +22,13 @@ def submit():
             password="123",
             host="localhost",
             port=3306,
-            database="PS"
+            database="ADET"
 
         )
         # Get Cursor
         cur = conn.cursor()
         # cur.execute
-        sequel_query = f'INSERT INTO USER VALUES("{info['f_name']}","{info['m_name']}", "{info['l_name']}", "{info['c_number']}", "{info['email']}", "{info['address']}");'
+        sequel_query = f'INSERT INTO ADET_USER VALUES("{info['f_name']}","{info['m_name']}", "{info['l_name']}", "{info['c_number']}", "{info['email']}", "{info['address']}");'
         # return sequel_query
         cur.execute(sequel_query)
     except mariadb.Error as e:
@@ -48,7 +46,7 @@ def users():
             password="123",
             host="localhost",
             port=3306,
-            database="PS"
+            database="ADET"
 
         )
     except mariadb.Error as e:
@@ -56,7 +54,7 @@ def users():
 
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM User")
+    cur.execute("SELECT * FROM adet_user")
     dbData =[]
     for a in cur:
         dbData.append(a)
